@@ -61,6 +61,10 @@ def require_jwt(function):
 def health():
     return jsonify("Deployment works!")
 
+@app.route('/new-end', methods=['GET'])
+def new_end():
+    return jsonify("New endpoint works perfectly!")
+
 
 @APP.route('/auth', methods=['POST'])
 def auth():
